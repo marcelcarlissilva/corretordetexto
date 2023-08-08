@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corretor de Texto Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        #input-text {
+            width: 80%;
+            height: 150px;
+        }
+
+        #output-text {
+            width: 80%;
+            height: 950px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Corretor de Texto Online</h1>
+    <p>Cole seu texto abaixo para correção:</p>
+    <textarea id="input-text"></textarea>
+    <p></p>
+    <button onclick="corrigirTexto()">Corrigir</button>
+    <p>Texto corrigido:</p>
+    <textarea id="output-text" readonly></textarea>
+
+    <script>
+        function corrigirTexto() {
+            const inputText = document.getElementById('input-text').value;
+            const outputText = document.getElementById('output-text');
+
+            // Simulação simples de correção de texto (substitui "teste" por "correção")
+            const textoCorrigido = inputText.replace(/\bteste\b/gi, 'correção');
+
+            outputText.value = textoCorrigido;
+        }
+    </script>
+</body>
+
+</html>
